@@ -149,6 +149,7 @@ pip install -r requirements.txt
 
 # 4. Run the demo (retrieval + QA) on the sampled demo dataset
 python demo/demo_run.py --topk 20
+```
 Argument
 
 --topk – number of documents to keep per question for metrics and QA
