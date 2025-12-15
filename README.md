@@ -143,8 +143,6 @@ git clone https://github.com/Somamohanty5/Alzheimer-s-Evidence-QA-from-PubMed-Ab
 cd Alzheimer-s-Evidence-QA-from-PubMed-Abstracts
 
 # 2. (Optional) create and activate a virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
 # 3. Install dependencies
 pip install -r requirements.txt
