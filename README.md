@@ -185,7 +185,7 @@ The script writes outputs under:
 
 Demo/runs/*.jsonl – one line per question with its answer, cited PMIDs, and titles.
 
-demo/runs/*_metrics_*.json – summary ROUGE-L and exact-match scores.
+Demo/runs/*_metrics_*.json – summary ROUGE-L and exact-match scores.
 
 For grading, it is enough to clone the repo, ensure demo/ is present, and run
 either:
