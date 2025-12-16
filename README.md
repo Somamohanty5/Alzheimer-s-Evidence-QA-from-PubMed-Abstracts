@@ -1,4 +1,4 @@
-# Alzheimer’s Evidence QA over PubMed (BioASQ)
+# Alzheimer’s Evidence QA from PubMed Abstracts
 
 This project builds a small **retrieval-augmented question answering (QA)** system for Alzheimer’s disease (AD).
 
