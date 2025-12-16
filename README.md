@@ -119,16 +119,16 @@ Everything needed for **quick run** is in this folder.
      - Baseline vs. hybrid retrieval on demo train and demo test  
        (Recall@10, nDCG@10, MAP, cap-normalized R@10).  
   5. Loads TinyLlama and evaluates QA on demo train and test  
-     (ROUGE-L and exact-match), saving outputs as JSON/JSONL in `demo/demo_runs/`.  
+     (ROUGE-L and exact-match), saving outputs as JSON/JSONL in `Demo/runs/`.  
   6. Prints a human-readable preview for one test question, including the  
      *“losartan and brain atrophy”* example described in the report.
 
 - `Demo/demo.ipynb`  
   A notebook version of the demo script.  
   This is what We used in Google Colab with a T4 GPU:
-  1. Upload the zipped `demo/` folder and `requirements.txt`.  
+  1. Upload the zipped `Demo/` folder and `requirements.txt`.  
   2. Unzip in the Colab workspace.  
-  3. Open `demo/demo.ipynb`.  
+  3. Open `Demo/demo.ipynb`.  
   4. Run all cells **sequentially** (they mirror the logic in `demo_run.py`).  
 
 ---
@@ -183,13 +183,13 @@ A three-sentence TinyLlama answer with PMIDs in brackets
 Expected files
 The script writes outputs under:
 
-demo/demo_runs/*.jsonl – one line per question with its answer, cited PMIDs, and titles.
+Demo/runs/*.jsonl – one line per question with its answer, cited PMIDs, and titles.
 
-demo/demo_runs/*_metrics_*.json – summary ROUGE-L and exact-match scores.
+demo/runs/*_metrics_*.json – summary ROUGE-L and exact-match scores.
 
 For grading, it is enough to clone the repo, ensure demo/ is present, and run
 either:
-python demo/demo_run.py --topk 20
+python Demo/demo_run.py --topk 20
 or open the notebook:
-demo/demo.ipynb
+Demo/demo.ipynb
 on a T4 GPU and run all cells.
