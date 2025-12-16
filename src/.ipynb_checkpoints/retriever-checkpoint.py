@@ -33,10 +33,6 @@ class CorpusData:
 
 
 class RetrievalPipeline:
-    """
-    Encapsulates indexing, classical retrieval, dense retrieval,
-    and cross-encoder reranking over a PMID corpus.
-    """
 
     def __init__(self, corpus: CorpusData, index_dir: Path | None = None, device: str | None = None) -> None:
         self.corpus = corpus

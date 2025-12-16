@@ -19,7 +19,6 @@ INDEX_DIR = PROJECT_ROOT / "index" / "whoosh_index"
 
 
 def create_project_directories() -> None:
-    """Create top-level project directories if they do not exist."""
     for path in [DATA_DIR, RAW_TRAIN_DIR, RAW_TEST_DIR, RUNS_DIR, INDEX_DIR, PROJECT_ROOT / "utils"]:
         path.mkdir(parents=True, exist_ok=True)
 
@@ -35,12 +34,10 @@ def safe_list(value: Any) -> List[Any]:
 
 
 def extract_pmid(url: str) -> str:
-    """Extract PMID from a PubMed URL or return the string if already a PMID."""
     return url.rsplit("/", 1)[-1] if "/" in url else url
 
 
 def is_ad_question(question_text: str, mesh_terms: Iterable[str] | None = None) -> bool:
-    """Return True if a BioASQ question is about Alzheimer’s / dementia."""
     if not question_text:
         return False
 
@@ -138,9 +135,6 @@ def filter_ad_questions(all_questions: List[Dict[str, Any]]) -> List[Dict[str, A
 # ---------- Corpus building ----------
 
 def build_snippet_corpus(ad_questions: List[Dict[str, Any]]) -> Dict[str, str]:
-    """
-    Build a PMID - text corpus using BioASQ snippets only.
-    """
     pmid_to_snippets: Dict[str, List[str]] = defaultdict(list)
 
     for question in ad_questions:
