@@ -96,17 +96,17 @@ These files implement the main logic used in both the full run and the demo.
 
 ---
 
-## 3. Demo Code (`demo/`)
+## 3. Demo Code (`Demo/`)
 
 Everything needed for **quick run** is in this folder.
 
-- `demo/demo_data/train/`  
+- `Demo/demo_data/train/`  
   Sampled AD training questions (BioASQ JSON).
 
-- `demo/demo_data/test/`  
+- `Demo/demo_data/test/`  
   Sampled AD test questions (BioASQ JSON).
 
-- `demo/demo_run.py`  
+- `Demo/demo_run.py`  
   A **self-contained script** that:
   1. Loads the demo train/test questions from `demo_data/`.  
   2. Builds the Alzheimer’s evidence corpus for the demo train questions  
@@ -123,7 +123,7 @@ Everything needed for **quick run** is in this folder.
   6. Prints a human-readable preview for one test question, including the  
      *“losartan and brain atrophy”* example described in the report.
 
-- `demo/demo.ipynb`  
+- `Demo/demo.ipynb`  
   A notebook version of the demo script.  
   This is what We used in Google Colab with a T4 GPU:
   1. Upload the zipped `demo/` folder and `requirements.txt`.  
@@ -148,7 +148,7 @@ cd Alzheimer-s-Evidence-QA-from-PubMed-Abstracts
 pip install -r requirements.txt
 
 # 4. Run the demo (retrieval + QA) on the sampled demo dataset
-python demo/demo_run.py --topk 20
+python Demo/demo_run.py --topk 20
 ```
 Argument
 
